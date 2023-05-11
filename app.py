@@ -1,9 +1,7 @@
 import Flask
 from flask import Flask, jsonify, request
-import numpy as np
 from sklearn.externals import joblib
-import pandas as pd
-import numpy as np
+
 
 app = Flask(__name__)
 
@@ -24,5 +22,5 @@ def predict():
         prediction = 'COVID-19 related'
         
     return jsonify({'prediction':prediction})
-if __name__ = '__main__':
+if __name__ == '__main__':
     app.run(host='0.0.0.0', port = 8080)
